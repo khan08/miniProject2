@@ -6,19 +6,27 @@ import java.math.BigDecimal;
 public class Product {
     private String name;
     private int amount;
-    private BigDecimal price;
+    private double price;
 
     //Constructors
-    public Product(String name,int amount,BigDecimal price){
+    public Product(String name,int amount,double price){
         this.name = name;
         this.amount = amount;
         this.price = price;
     }
-
     public Product(){}
+
+    //print
+    public String print(){
+        return this.name + " " + this.amount + " " + this.price;
+    }
 
     //Accessor
     public int getAmount() {
         return amount;
+    }
+
+    public double getPrice() {
+        return price;
     }
 }

@@ -39,10 +39,11 @@ public class Currency {
         }
     }
 
-    public void print() {
-        System.out.println(this.name + " " + this.type + " " + this.value + " " + this.amount);
+    public String print() {
+        return this.name + " " + this.type + " " + this.value + " " + this.amount;
     }
-
-
+    public double getValue() {
+        return value;
+    }
 }
 
