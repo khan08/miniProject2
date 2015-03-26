@@ -18,12 +18,17 @@ public class Product {
 
     //print
     public String print(){
-        return this.name + " " + this.amount + " " + this.price;
+        return "Name: "+this.name + ", Quantity: " + this.amount + ", Price: " + this.price;
     }
+
+
 
     //Accessor
     public int getAmount() {
         return amount;
+    }
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 
     public double getPrice() {

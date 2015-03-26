@@ -17,7 +17,7 @@ public class Currency {
             this.name = "$20";
         } else if (value==10) {
             this.type = "paper bill";
-            this.name = "$20";
+            this.name = "$10";
         } else if (value==5) {
             this.type = "paper bill";
             this.name = "$5";
@@ -39,11 +39,26 @@ public class Currency {
         }
     }
 
+    public double totalValue(){
+        return this.value*this.amount;
+    }
+
     public String print() {
-        return this.name + " " + this.type + " " + this.value + " " + this.amount;
+        return "Name: "+this.name + ", Material: " + this.type + ", Value: " + this.value + ", Quantity: " + this.amount;
+    }
+    public String listCurrency() {
+        return "Name: "+this.name + ", Material: " + this.type + ", Value: " + this.value;
     }
     public double getValue() {
         return value;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public int getAmount() {
+        return amount;
     }
 }
 
